@@ -1,0 +1,69 @@
+1.Log in to the ServiceNow instance with administrative or configuration access.
+
+
+2.Navigate to:
+ System UI → UI Policies
+
+
+3.Click New to create a new UI Policy record.
+
+
+Fill in the following details:
+
+
+Name: High Impact Control
+ This name clearly represents the purpose of the policy, which is to apply additional controls when an Incident has a high impact.
+
+
+Table: Incident
+ Specifies that the UI Policy applies to Incident records.
+
+
+Active: true
+ Enables the UI Policy so it is enforced on the Incident form.
+
+
+4.Configure the Conditions section as follows:
+
+
+Field: Impact
+
+
+Operator: is
+
+
+Value: 1 – High
+
+
+5.This condition ensures the UI Policy is triggered only when the Incident impact is set to High.
+
+And Ui policy action Assignment group 
+
+Check mandatory
+
+
+6.Set Reverse if false to true.
+ This ensures that when the condition is not met, any field changes applied by the policy are automatically reverted.
+
+
+7.Review the configuration to ensure accuracy.
+
+
+8.Click Submit to save the UI Policy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
