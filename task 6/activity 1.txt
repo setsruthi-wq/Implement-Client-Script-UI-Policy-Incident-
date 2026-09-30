@@ -1,0 +1,26 @@
+1.Navigate to Incident:
+ Go to Incident → Create New to open a new Incident form.
+
+
+2.Set the Impact Field:
+ Select High for the Impact field. This will trigger the UI Policy and Client Script behaviors you configured earlier.
+
+
+3.Leave Assigned To Empty:
+ Do not fill in the Assigned To field. This will test the onSubmit Client Script that prevents saving if Assigned To is missing.
+
+
+4.Click Submit:
+ Attempt to save the Incident record.
+
+
+5.Verify the Result:
+
+
+6.The Incident should not be saved because Assigned To is required when Impact is High.
+
+
+7.An error message should appear, indicating that the Assigned To field cannot be empty.
+
+
+8.Confirm that all UI Policy actions, such as read-only fields or automated urgency updates, are working as expected.

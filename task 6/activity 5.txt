@@ -1,0 +1,19 @@
+1.Open the Incident Record:
+ Navigate to the same Incident record you used in previous tests.
+
+
+2.Change the State:
+ On the Incident form, update the State field to a new value. This tests that changes via the form (not the list) are allowed.
+
+
+3.Click Update:
+ Save the record by clicking Update.
+
+
+4.Verify the Result:
+
+
+5.The State change should be saved successfully.
+
+
+6.Confirm that other fields, such as Assigned To and Urgency, still follow the configured UI Policy and Client Script rules.

@@ -1,0 +1,19 @@
+1.Open an Existing Incident:
+ Go to Incident → Open and select an Incident where Impact is currently set to High.
+
+
+2.Change Impact:
+ Update the Impact field from High to Medium. This will test the Reverse if false functionality of your UI Policy and the behavior of your Client Scripts.
+
+
+3.Verify the Field Behavior:
+
+
+4.Assigned To should no longer be mandatory.
+
+
+5.Urgency should now be editable, meaning the read-only UI Policy action is reversed.
+
+
+6.Save the Record:
+ Click Submit to save the changes. The record should save successfully without errors, confirming that the reverse condition works as intended.

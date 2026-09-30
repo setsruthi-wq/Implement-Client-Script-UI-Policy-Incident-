@@ -1,0 +1,25 @@
+1.Fill the Assigned To Field:
+ Open the Incident form and select a user in the Assigned To field. This ensures the onSubmit Client Script condition is satisfied.
+
+
+2.Click Submit:
+ Attempt to save the Incident record.
+
+
+3.Verify the Result:
+
+
+4.The Incident should be saved successfully without any errors.
+
+
+5.Confirm that all other configured behaviors, such as:
+
+
+6.Urgency auto-setting (from the onChange Client Script)
+
+
+7.Read-only fields (from the UI Policy Action)
+
+
+8.State restrictions (from the onCellEdit Client Script)
+ are functioning as expected
