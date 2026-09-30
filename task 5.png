@@ -1,0 +1,41 @@
+1.Navigate to Client Scripts:
+ Go to System UI → Client Scripts in your ServiceNow instance.
+
+
+2.Click New to create a new Client Script.
+
+
+3.Fill in the details:
+
+
+Name: Prevent state change via list edit – clearly indicates that the script prevents users from changing the State field directly in a list.
+
+
+Table: Incident – applies the script only to Incident records.
+
+
+Type: onCellEdit – runs whenever a field is edited directly in a list view.
+
+
+Field name: State – the script will monitor changes to the State field.
+
+
+Active: true – ensures the script is enforced immediately.
+
+
+4.Paste the script into the script editor section. The script should prevent unauthorized changes to the State field when editing from the list view.
+
+function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
+
+    alert('State cannot be updated using list editing. Please open the Incident.');
+
+    callback(false);
+}
+
+5.Click Submit to save the Client Script.
+
+
+6.Verify: Open an Incident list and try to change the State field directly in the list. The script should block the change as intended.
+
+ 7.  Click Submit.
+
