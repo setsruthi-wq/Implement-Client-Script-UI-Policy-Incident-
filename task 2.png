@@ -1,0 +1,42 @@
+1.Open the UI Policy Actions
+ Go to the High Impact Control UI Policy you created earlier. Scroll down to the UI Policy Actions related list. This is where you define the specific behavior of fields when the policy conditions are met.
+
+
+2.Create a New Action
+ Click New to create a UI Policy Action. This lets you configure how individual fields behave when the UI Policy is triggered.
+
+
+3.Fill in the Action Details
+
+
+Field name: Urgency
+ Select the Urgency field on the Incident form. This is the field you want to control.
+
+
+Read-only: true
+ Check this option to make the Urgency field read-only whenever the UI Policy condition is met (Impact = High). Users will be able to see the field but cannot change its value.
+
+
+Visible: Leave this field as is (do not change).
+ By leaving it unchanged, the field will remain visible on the form, but its behavior will be controlled by the Read-only setting.
+
+
+4.Submit the Action
+ Click Submit to save the UI Policy Action. The action is now linked to the High Impact Control UI Policy and will automatically apply to the Urgency field when an Incident has High Impact.
+
+
+5.Optional Verification
+ To test the action:
+
+
+Open an Incident record.
+
+
+Set the Impact field to High.
+
+
+6.Check that the Urgency field becomes read-only.
+
+
+7.Change Impact to a different value to confirm that the field reverts back if needed.
+
