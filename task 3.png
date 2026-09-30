@@ -1,0 +1,45 @@
+1.Navigate to Client Scripts:
+ Go to System UI → Client Scripts.
+
+
+2.Click New to create a new Client Script.
+
+
+3.Fill in the details:
+
+
+Name: Auto set urgency for high impact – clearly shows the purpose.
+
+
+Table: Incident – the script runs only on Incident records.
+
+
+Type: onChange – executes when a field value changes.
+
+
+Field name: Impact – triggers the script when Impact is updated.
+
+
+Active: true – ensures the script runs immediately.
+
+
+4.Paste the script in the script editor section.
+
+function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+
+    if (newValue == '1') {
+        g_form.setValue('urgency', '1');
+        g_form.addInfoMessage('Urgency set to High for High impact incident.');
+    }
+}
+
+5.Click Submit to save the Client Script.
+
+
+6.Verify: Open an Incident record and change the Impact field to High. The Urgency field should update automatically
+
+7.Click Submit.
+
