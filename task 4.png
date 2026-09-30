@@ -1,0 +1,44 @@
+1.Navigate to Client Scripts:
+ Go to System UI → Client Scripts in your ServiceNow instance.
+
+
+2.Click New to create a new Client Script.
+
+
+3.Fill in the details:
+
+
+Name: Prevent save if Assigned To missing – clearly indicates that the script prevents saving if the field is empty.
+
+
+Table: Incident – applies the script only to Incident records.
+
+
+Type: onSubmit – executes when the user tries to save the record.
+
+
+Active: true – ensures the script is enforced immediately.
+
+
+4.Paste the script into the script editor section. This script should check if the Assigned To field is empty and prevent the record from saving if it is.
+
+function onSubmit() {
+    if (g_form.getValue('impact') == '1' &&
+        g_form.getValue('assigned_to') == '') {
+
+        g_form.showErrorBox(
+            'assigned_to',
+            'Assigned To is mandatory for High impact incidents.'
+        );
+        return false;
+    }
+    return true;
+}
+
+5.Click Submit to save the Client Script.
+
+
+6.Verify: Try saving an Incident without filling the Assigned To field. The script should prevent the save and display a warning.
+
+7.   Click Submit.
+
